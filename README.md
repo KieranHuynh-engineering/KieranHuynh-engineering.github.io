@@ -12,52 +12,63 @@ brackets and a label telling you what goes there and the recommended size.
 ```
 images/
   seagull/
-    hero.jpg             2400×1000  wide banner at top of project page
-    card-thumb.jpg        1200×750  homepage card thumbnail
-    mark-01.jpg            900×675  bare electronics on the bench
-    mark-02.jpg            900×675  laser-cut plywood test housing
-    mark-04.jpg             900×675 housing with counterweight
-    mark-07.jpg             900×675 first 3D-printed shell
-    mark-12.jpg             900×675 mounting / charging port detail
-    mark-15.jpg             900×675 final housing, branded
-    final-assembly.jpg     1600×900 full assembled unit
+    hero.jpg               21:9  wide banner at top of project page
+    card-thumb.jpg        16:10  homepage card thumbnail
+    mark-01.jpg              4:3  bare electronics on the bench
+    mark-02.jpg              4:3  laser-cut plywood test housing
+    mark-04.jpg              4:3  housing with counterweight
+    mark-07.jpg              4:3  first 3D-printed shell
+    mark-12.jpg              4:3  mounting / charging port detail
+    mark-15.jpg              4:3  final housing, branded
+    final-assembly.jpg      16:9  full assembled unit
 
   robotic-arm/
-    hero.jpg              2400×1000
-    card-thumb.jpg         1200×750
-    mark-01.jpg              900×675  kinematic layout / servo placement
-    mark-02.jpg              900×675  base and shoulder structural supports
+    hero.jpg                21:9
+    card-thumb.jpg         16:10
+    mark-01.jpg               4:3  kinematic layout / servo placement
+    mark-02.jpg               4:3  base and shoulder structural supports
 
   usyd-motorsport/
-    hero.jpg               2400×1000
-    card-thumb.jpg          1200×750
-    fea-fos.jpg             1600×900  factor of safety plot
-    fea-fastener.jpg        1600×900  deformation at fastener region
-    geometry-comparison.jpg 1600×900  initial → final geometry side by side
+    hero.jpg                 21:9
+    card-thumb.jpg          16:10
+    fea-fos.jpg               16:9  factor of safety plot
+    fea-fastener.jpg          16:9  deformation at fastener region
+    geometry-comparison.jpg   16:9  initial → final geometry side by side
 
   usyd-rocketry/
-    hero.jpg                2400×1000
-    card-thumb.jpg           1200×750
-    deployed.jpg             1600×900  rail guide extended, on the rail
-    retracted.jpg            1600×900  rail guide flush, in flight
+    hero.jpg                  21:9
+    card-thumb.jpg           16:10
+    deployed.jpg               16:9  rail guide extended, on the rail
+    retracted.jpg              16:9  rail guide flush, in flight
 
   beerbound/
-    hero.jpg                 2400×1000
-    card-thumb.jpg            1200×750
-    architecture.jpg          1600×900  system diagram (can be a real diagram, not a photo)
-    gps-filtering.jpg         900×675  app screen / screenshot
+    hero.jpg                   21:9
+    card-thumb.jpg            16:10
+    architecture.jpg            16:9  system diagram (can be a real diagram, not a photo)
+    gps-filtering.jpg            4:3  app screen / screenshot
 
   metso-turbimax/
-    hero.jpg                  2400×1000
-    card-thumb.jpg             1200×750
-    annotated-cad.jpg          1600×900  exploded / annotated CAD render
-    final-assembly.jpg         1600×900  finished mount
+    hero.jpg                     21:9
+    card-thumb.jpg               16:10
+    annotated-cad.jpg              16:9  exploded / annotated CAD render
+    final-assembly.jpg             16:9  finished mount
 ```
 
-Any image you don't have yet is fine to skip — the placeholder just stays
-until you add it. Recommended sizes are a guide, not a hard requirement;
-images are cropped to fit (`object-fit: cover`), so anything reasonably
-close in aspect ratio will look fine.
+These ratios are a guide, not a hard requirement — images are cropped to
+fit (`object-fit: cover`), so anything reasonably close will look fine.
+Any image you don't have yet is fine to skip; the placeholder just stays
+until you add it.
+
+**Setting these up in Canva:** when you start a new design, use "Custom
+size" and enter dimensions in that ratio rather than picking a preset —
+Canva doesn't have built-in 21:9 or 16:10 presets. A safe px size for each:
+
+- `21:9` → 2100 × 900
+- `16:10` → 1600 × 1000
+- `16:9` → 1600 × 900
+- `4:3` → 1200 × 900
+
+Canva will scale these down fine for web use; there's no need to go larger.
 
 **To insert a photo**, open the relevant HTML file and replace the
 `<div class="photo-slot">...</div>` block with a plain image tag, e.g.:

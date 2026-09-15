@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeerBound — iOS Location Tracking App — Your Name</title>
+<meta name="description" content="A Swift iOS app engineered around unreliable GPS data to record and reconstruct a night out.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">YOUR NAME <span class="brand-dot">·</span> <small>MECHANICAL / MECHATRONIC ENGINEERING</small></a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="site-nav">
+      <a href="../index.html#work" class="active">Work</a>
+      <a href="../index.html#method">Approach</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="proj-hero">
+  <div class="wrap" style="padding:0">
+    <div class="photo-slot" style="--ratio:21/9">
+              <span class="corner-l"></span><span class="corner-r"></span>
+              <span class="photo-slot__label">BeerBound — route tracking screen<br><small>images/beerbound/hero.jpg · 2400×1000</small></span>
+            </div>
+  </div>
+  <div class="wrap" style="padding:0">
+    <div class="title-block">
+      <div>
+        <div class="card-meta" style="margin-bottom:12px"><span class="dwg-no">DWG 05</span> · <span class="status-dot wip"></span> In progress · Submitted for Apple review</div>
+        <h1>BeerBound — iOS Location Tracking App</h1>
+        <p class="objective">A Swift iOS app that records a night out from live GPS and photo EXIF data — built around the problem of trusting imperfect location signals.</p>
+      </div>
+      <div class="spec-list">
+        <div><span>Status</span><b>In review (Apple)</b></div>
+<div><span>Discipline</span><b>iOS / Software</b></div>
+<div><span>Backend</span><b>Supabase</b></div>
+<div><span>Core problem</span><b>GPS reliability</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">PROBLEM</div>
+      <div>
+        <h2>Tracking a night out, automatically</h2>
+        <div class="content-body">
+          
+<p>BeerBound records a user's route on a night out using live GPS, automatically detects when tracking should stop, and matches photos to locations using their EXIF GPS data — combining live location tracking, photo metadata, and venue, deal and event data pulled through API calls from a Supabase-hosted backend, with offline caching so the app keeps working when connectivity doesn't.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">ENGINEERING CHALLENGE</div>
+      <div>
+        <h2>iOS won't just hand you clean GPS data</h2>
+        <div class="content-body">
+          
+<p>The central challenge is reliability within iOS's restrictions on background processes: the app can't assume every GPS fix it receives is accurate. Location jitter, implausibly large jumps, poor network conditions, public transport and dense urban environments all produce location data that, taken at face value, would distort the recorded route.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">TECHNICAL DEVELOPMENT</div>
+      <div>
+        <h2>Architecture</h2>
+        <div class="content-body">
+          
+<p>iOS App → GPS &amp; Photo EXIF data → Filtering &amp; Processing Logic → API layer → Supabase.</p>
+<div class="photo-slot" style="--ratio:16/9">
+              <span class="corner-l"></span><span class="corner-r"></span>
+              <span class="photo-slot__label">System architecture diagram<br><small>images/beerbound/architecture.jpg · 1600×900</small></span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">RELIABILITY ENGINEERING</div>
+      <div>
+        <h2>Deciding whether to trust a GPS fix</h2>
+        <div class="content-body">
+          
+<p>Rather than treating every incoming location point as accurate, the app evaluates each fix and applies logic to filter out the unreliable ones — a form of reliability engineering that designs around the known failure modes of consumer GPS hardware and the iOS platform, instead of assuming the sensor layer is trustworthy by default.</p>
+<div class="photo-slot" style="--ratio:4/3">
+              <span class="corner-l"></span><span class="corner-r"></span>
+              <span class="photo-slot__label">App screen — GPS filtering in action<br><small>images/beerbound/gps-filtering.jpg · 900×675</small></span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">ENGINEERING SKILLS</div>
+      <div>
+        <h2>Disciplines applied</h2>
+        <div class="content-body">
+          <div class="skill-cloud"><span class="tag">Swift</span><span class="tag">iOS Development</span><span class="tag">GPS Systems</span><span class="tag">Location Data Processing</span><span class="tag">EXIF Metadata</span><span class="tag">API Integration</span><span class="tag">Supabase</span><span class="tag">Database Architecture</span><span class="tag">Offline Caching</span><span class="tag">Background-Process Constraints</span><span class="tag">Data Validation</span><span class="tag">Reliability Engineering</span><span class="tag">UI Development</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content-section" style="border-bottom:none"><div class="wrap"><div class="status-line"><span class="status-dot wip"></span> In progress — submitted for Apple App Store review</div></div></section>
+<nav class="proj-nav">
+  <a href="usyd-rocketry.html"><span class="dir mono">← PREVIOUS</span><span class="name">Retractable Rail Guide</span></a>
+  <a class="next" href="metso-turbimax.html"><span class="dir mono">NEXT →</span><span class="name">Turbimax Sensor Mount</span></a>
+</nav>
+
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="status-line"><span class="status-dot ok"></span> Open to graduate / internship roles</div>
+        <div class="footer-note">Sydney, Australia</div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:you@example.com">Email</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#">Resume (PDF)</a>
+      </div>
+    </div>
+    <div class="footer-note">© 2026 Your Name. Built and deployed on GitHub Pages.</div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

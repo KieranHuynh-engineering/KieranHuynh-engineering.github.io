@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5-DOF Robotic Arm — Your Name</title>
+<meta name="description" content="A low-cost, 3D-printed robotic arm designed from first principles to clear finished prints off a 3D printer bed.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">YOUR NAME <span class="brand-dot">·</span> <small>MECHANICAL / MECHATRONIC ENGINEERING</small></a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="site-nav">
+      <a href="../index.html#work" class="active">Work</a>
+      <a href="../index.html#method">Approach</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="proj-hero">
+  <div class="wrap" style="padding:0">
+    <div class="photo-slot" style="--ratio:21/9">
+              <span class="corner-l"></span><span class="corner-r"></span>
+              <span class="photo-slot__label">Robotic arm — current build<br><small>images/robotic-arm/hero.jpg · 2400×1000</small></span>
+            </div>
+  </div>
+  <div class="wrap" style="padding:0">
+    <div class="title-block">
+      <div>
+        <div class="card-meta" style="margin-bottom:12px"><span class="dwg-no">DWG 02</span> · <span class="status-dot wip"></span> In progress · Self-funded personal project</div>
+        <h1>5-DOF Robotic Arm</h1>
+        <p class="objective">A five-degree-of-freedom robotic arm designed to lift finished prints off a 3D printer bed and place them neatly aside — built low-cost, from first principles.</p>
+      </div>
+      <div class="spec-list">
+        <div><span>Status</span><b>In progress</b></div>
+<div><span>Discipline</span><b>Robotics / Mechatronics</b></div>
+<div><span>Budget approach</span><b>Low-cost, 3D-printed / salvaged</b></div>
+<div><span>Current stage</span><b>Mark 2</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">PROBLEM</div>
+      <div>
+        <h2>Why not just sweep the plate?</h2>
+        <div class="content-body">
+          
+<p>The simplest way to clear a finished 3D print is a mechanical sweeper arm — but a sweeper can't tell a delicate print from a robust one, and it can't handle a plate with several separate objects on it. A robotic arm trades that simplicity for real control over how each object is picked up, moved and placed, at the cost of a much harder mechanical and control problem.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">ENGINEERING CHALLENGE</div>
+      <div>
+        <h2>Servo placement drives everything else</h2>
+        <div class="content-body">
+          
+<p>Every joint in the arm is driven by an MG995, MG955 or MG90S servo, and the central design problem is where to put them: servo position determines the torque and moment each joint has to resist, which in turn determines how the structure needs to be built. The project is being developed on a deliberately low budget, so components are 3D-printed or salvaged from household items and earlier projects wherever possible — which narrows the design space further.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">DESIGN PROCESS</div>
+      <div>
+        <h2>From kinematic layout to a buildable structure</h2>
+        <div class="content-body">
+          
+<div class="timeline">
+
+      <div class="mark">
+        <div class="mark-index"><b>MARK 1</b>Mechanical architecture</div>
+        <div class="mark-content">
+          
+      <p>The first prototype established servo placement, arm and joint dimensions, structural arrangement and torque requirements, backed by moment calculations rather than guesswork. Dual MG995 servos were chosen for the shoulder to provide extra torque, the load was kept centrally balanced where possible, and a servo was positioned low on the forearm to reduce the moment on the structure while still letting the gripper platform rotate — driven by an MG90S. Arm braces were added to stop unwanted movement while staying printable.</p>
+          <div class="photo-slot" style="--ratio:4/3">
+              <span class="corner-l"></span><span class="corner-r"></span>
+              <span class="photo-slot__label">Mark 1 — kinematic layout and servo placement<br><small>images/robotic-arm/mark-01.jpg · 900×675</small></span>
+            </div>
+        </div>
+      </div>
+      <div class="mark">
+        <div class="mark-index"><b>MARK 2</b>Structural supports</div>
+        <div class="mark-content">
+          
+      <p>The second prototype turns that kinematic arrangement into real, printable structure. A support ring braces the base columns against internal forces. The upper-arm support uses a circular geometry to minimise contact points and friction while reducing shear on the servo shaft. The base servo housing has an alignment indentation that also cuts down on print support material. A bearing guide rail retains truncated-cone bearings across stepped levels, giving the base five points of contact per bearing, with circular offsets keeping it concentric while minimising friction.</p>
+          <div class="photo-slot" style="--ratio:4/3">
+              <span class="corner-l"></span><span class="corner-r"></span>
+              <span class="photo-slot__label">Mark 2 — base and shoulder structural supports<br><small>images/robotic-arm/mark-02.jpg · 900×675</small></span>
+            </div>
+        </div>
+      </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">PLANNED DEVELOPMENT</div>
+      <div>
+        <h2>What's built vs. what's next</h2>
+        <div class="content-body">
+          
+<p><b style="color:var(--paper)">Built so far:</b> the mechanical arm structure through Mark 2 — servo placement, shoulder and base supports, bearing system.</p>
+<p><b style="color:var(--paper)">Planned, not yet implemented:</b> completing the mechanical arm and gripper, integrating a camera and repurposed piezoelectric sensors into the gripper for feedback, remote control, a phone app and UI, control software, and inverse kinematics calculated in MATLAB.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-head">
+      <div class="label mono">ENGINEERING SKILLS</div>
+      <div>
+        <h2>Disciplines applied</h2>
+        <div class="content-body">
+          <div class="skill-cloud"><span class="tag">Robotics</span><span class="tag">Mechanical Design</span><span class="tag">Mechatronics</span><span class="tag">Servo Selection</span><span class="tag">Moment Calculations</span><span class="tag">Torque Analysis</span><span class="tag">Structural Design</span><span class="tag">Bearing Design</span><span class="tag">Friction Reduction</span><span class="tag">3D-Printing Design</span><span class="tag">MATLAB</span><span class="tag">Inverse Kinematics</span><span class="tag">Iterative Prototyping</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content-section" style="border-bottom:none"><div class="wrap"><div class="status-line"><span class="status-dot wip"></span> In progress — mechanical structure at Mark 2, gripper and control system not yet built</div></div></section>
+<nav class="proj-nav">
+  <a href="seagull.html"><span class="dir mono">← PREVIOUS</span><span class="name">Seagull</span></a>
+  <a class="next" href="usyd-motorsport.html"><span class="dir mono">NEXT →</span><span class="name">Jacking Bar Bracket</span></a>
+</nav>
+
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="status-line"><span class="status-dot ok"></span> Open to graduate / internship roles</div>
+        <div class="footer-note">Sydney, Australia</div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:you@example.com">Email</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#">Resume (PDF)</a>
+      </div>
+    </div>
+    <div class="footer-note">© 2026 Your Name. Built and deployed on GitHub Pages.</div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
